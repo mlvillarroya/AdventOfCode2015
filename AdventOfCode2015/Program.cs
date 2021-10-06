@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AdventOfCode2015.Challenges;
+using AdventOfCode2015.Resources;
 using AdventOfCode2015.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -18,8 +19,13 @@ namespace AdventOfCode2015
         }
 
         static IHostBuilder CreateHostBuilder(string[] args) =>
-                Host.CreateDefaultBuilder(args)
-                    .ConfigureServices((_, services) =>
-                        services.AddSingleton<IWebReader, WebReader>());
+            Host.CreateDefaultBuilder(args)
+                .ConfigureServices((_, services) =>
+                {
+                    services.AddTransient<Challenge1A>();
+                    services.AddSingleton<IFileWrapper, FileWrapper>();
+                    services.AddSingleton<IFileServer, FileServer>();
+                });
+
     }
 }

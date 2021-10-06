@@ -1,16 +1,23 @@
+using System;
+using System.IO;
 using AdventOfCode2015.Services;
+using AdventOfCode2015.Resources;
 
 namespace AdventOfCode2015.Challenges
 {
     public class Challenge1A
     {
-        private readonly IWebReader _webReader;
-        private const string Url1A = "https://adventofcode.com/2015/day/1/input";
+        private readonly IFileWrapper _fileWrapper;
+        private readonly IFileServer _fileServer;
 
-        public Challenge1A(IWebReader webReader)
+        public Challenge1A(IFileWrapper fileWrapper,
+                           IFileServer fileServer)
         {
-            _webReader = webReader;
-            var code = _webReader.Content(Url1A);
+            _fileWrapper = fileWrapper;
+            _fileServer = fileServer;
+            // Read entire text file content in one string  
+            var text = _fileWrapper.ReadAllTextInOneString(_fileServer.GetFilePath(FileNames.CHALLENGE1A));  
+            Console.WriteLine(text);  
         }
         
     }
