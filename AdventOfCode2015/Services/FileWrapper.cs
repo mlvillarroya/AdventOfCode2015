@@ -8,5 +8,10 @@ namespace AdventOfCode2015.Services
         {
             return File.ReadAllText(path);
         }
+
+        public string[] ReadAllTextInArray(string path)
+        {
+            return File.ReadAllLines(path);
+        }
     }
 }
