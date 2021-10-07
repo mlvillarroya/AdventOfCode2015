@@ -14,7 +14,7 @@ namespace AdventOfCode2015
         {
             using var host = CreateHostBuilder(args).Build();
 
-            var challenge1A = host.Services.GetService<Challenge1A>();
+            var challenge1A = host.Services.GetService<Challenge1B>();
             
             return host.RunAsync();
         }

@@ -16,9 +16,28 @@ namespace AdventOfCode2015.Challenges
             _fileWrapper = fileWrapper;
             _fileServer = fileServer;
             // Read entire text file content in one string  
-            var text = _fileWrapper.ReadAllTextInOneString(_fileServer.GetFilePath(FileNames.CHALLENGE1A));  
-            Console.WriteLine(text);  
+            var text = _fileWrapper.ReadAllTextInOneString(_fileServer.GetFilePath(FileNames.CHALLENGE1A));
+            Console.WriteLine(CalculateFloor(text));
         }
-        
+
+        private int CalculateFloor(string text)
+        {
+            var floor = 0;
+            foreach (var letter in text)
+            {
+                switch (letter)
+                {
+                    case '(':
+                        floor++;
+                        break;
+                    case ')':
+                        floor--;
+                        break;   
+                    default:
+                        break;
+                }
+            }
+            return floor;
+        }
     }
 }

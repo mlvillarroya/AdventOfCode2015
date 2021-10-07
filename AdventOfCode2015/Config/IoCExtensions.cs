@@ -29,6 +29,7 @@ namespace AdventOfCode2015.Config
         private static IServiceCollection ConfigureChallengeModels(IServiceCollection services)
         {
             services.AddTransient<Challenge1A>();
+            services.AddTransient<Challenge1B>();
 
             return services;
         }
