@@ -34,12 +34,14 @@ namespace AdventOfCode2015.Config
             services.AddTransient<Challenge1B>();
             services.AddTransient<Challenge2A>();
             services.AddTransient<Challenge3>();
+            services.AddTransient<Challenge4>();
 
             return services;
         }
         private static IServiceCollection ConfigureHelpers(IServiceCollection services)
         {
             services.AddSingleton<IPresentListParser, PresentListParser>();
+            services.AddSingleton<IEncrypting, Encrypting>();
 
             return services;
         }

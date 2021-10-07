@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using AdventOfCode2015.Helpers;
 using AdventOfCode2015.Models;
 using AdventOfCode2015.Services;
@@ -13,18 +11,17 @@ namespace AdventOfCode2015.Challenges
     {
         private readonly IFileWrapper _fileWrapper;
         private readonly IFileServer _fileServer;
-        private readonly IPresentListParser _presentListParser;
         private readonly string text;
 
         public Challenge3(IFileWrapper fileWrapper,
             IFileServer fileServer,
-            IPresentListParser presentListParser)
+            IPresentListParser presentListParser,
+            IEncrypting encrypting)
         {
             _fileWrapper = fileWrapper;
             _fileServer = fileServer;
-            _presentListParser = presentListParser;
             text = _fileWrapper.ReadAllTextInOneString(_fileServer.GetFilePath(FileNames.CHALLENGE3));
-
+            CalculateSantaTrip();
             CalculateSantaAndRobotTrip();
         }
 
@@ -61,11 +58,9 @@ namespace AdventOfCode2015.Challenges
                     houses.Add(robotPosition.ToString());
                 }
             }
-
             Console.WriteLine($"String length: {text.Length}");
             Console.WriteLine($"Number of houses visited: {houses.Count}");
         }
-
     }
 }
     
