@@ -23,6 +23,8 @@ namespace AdventOfCode2015.Challenges
             _presentListParser = presentListParser;
             var text = _fileWrapper.ReadAllTextInArray(_fileServer.GetFilePath(FileNames.CHALLENGE2));
             var presentList = _presentListParser.StringArrayToPresentList(text);
+            Console.WriteLine("Total wrapping paper: " + presentList.Sum(present => present.ComputeNeededPaper()).ToString());
+            Console.WriteLine("Total ribbon: " + presentList.Sum(p => p.ComputeNeededRibbon()).ToString());
         }
     }
 }
