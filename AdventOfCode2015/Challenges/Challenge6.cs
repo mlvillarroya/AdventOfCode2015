@@ -27,8 +27,10 @@ namespace AdventOfCode2015.Challenges
             text = _fileWrapper.ReadAllTextInArray(_fileServer.GetFilePath(FileNames.CHALLENGE6));
             foreach (var line in text)
             {
-                ledMatrix.ReadInstruction(line);
+                ledMatrix.ReadInstruction(line,2);
             }
+            //Console.WriteLine($"Total leds on: {ledMatrix.TotalLedOn()}");
+            Console.WriteLine($"Total brightness: {ledMatrix.TotalBrightness()}");
         }
     }
 }
