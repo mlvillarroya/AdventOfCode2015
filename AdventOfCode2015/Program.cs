@@ -1,9 +1,6 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AdventOfCode2015.Challenges;
 using AdventOfCode2015.Config;
-using AdventOfCode2015.Resources;
-using AdventOfCode2015.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 namespace AdventOfCode2015
@@ -14,7 +11,7 @@ namespace AdventOfCode2015
         {
             using var host = CreateHostBuilder(args).Build();
 
-            var challenge = host.Services.GetService<Challenge5>();
+            var challenge = host.Services.GetService<Challenge6>();
             
             return host.RunAsync();
         }
