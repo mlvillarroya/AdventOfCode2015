@@ -25,6 +25,7 @@ namespace AdventOfCode2015.Config
             services.AddSingleton<IFileWrapper, FileWrapper>();
             services.AddSingleton<IFileServer, FileServer>();
             services.AddSingleton<ILedMatrix, LedMatrix>();
+            services.AddSingleton<IWireList, WireList>();
 
             return services;
         }
@@ -38,6 +39,7 @@ namespace AdventOfCode2015.Config
             services.AddTransient<Challenge4>();
             services.AddTransient<Challenge5>();
             services.AddTransient<Challenge6>();
+            services.AddTransient<Challenge7>();
 
             return services;
         }
