@@ -4,7 +4,8 @@ namespace AdventOfCode2015.Services
 {
     public interface IWireList
     {
-        void AddWire(string code, int signal);
-        int GetWireValue(string code);
+        void SetWire(string code, int signal);
+        Wire GetWire(string code);
+        public bool WireIsSet(string code);
     }
 }

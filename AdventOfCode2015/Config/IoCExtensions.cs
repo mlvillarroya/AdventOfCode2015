@@ -26,6 +26,7 @@ namespace AdventOfCode2015.Config
             services.AddSingleton<IFileServer, FileServer>();
             services.AddSingleton<ILedMatrix, LedMatrix>();
             services.AddSingleton<IWireList, WireList>();
+            services.AddSingleton<ILogicFunctions, LogicFunctions>();
 
             return services;
         }
