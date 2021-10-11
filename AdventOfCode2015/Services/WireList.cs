@@ -16,8 +16,11 @@ namespace AdventOfCode2015.Services
 
         public void SetWire(string code, int signal)
         {
-            var wire = new Wire(code, signal);
-            Wires.Add(wire);
+            if (!WireIsSet(code))
+            {
+                var wire = new Wire(code, signal);
+                Wires.Add(wire);
+            }
         }
 
         public bool WireIsSet(string code)
@@ -28,6 +31,11 @@ namespace AdventOfCode2015.Services
         public Wire GetWire(string code)
         {
             return Wires.FirstOrDefault(w => w.GetCode().Equals(code));
+        }
+
+        public void ResetWireList()
+        {
+            Wires.Clear();
         }
     }
 }

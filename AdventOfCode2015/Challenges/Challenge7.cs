@@ -29,11 +29,22 @@ namespace AdventOfCode2015.Challenges
             _wireList = wireList;
             _logicFunctions = logicFunctions;
             text = _fileWrapper.ReadAllTextInArray(_fileServer.GetFilePath(FileNames.CHALLENGE7));
-            var instructions = new List<LogicWireInstruction>();
-            foreach (var line in text)
-            {
-                instructions.Add(_logicFunctions.StringToInstruction(line));
-            }
+            List<LogicWireInstruction> instructions = LoadInstructions();
+            ProcessInstructions(instructions);
+            var finalValuePartA = _wireList.GetWire("a").GetValue();
+            Console.WriteLine("Part A -> Wire a: " + finalValuePartA);
+            // PART B
+            _wireList.ResetWireList();
+            _wireList.SetWire("b",finalValuePartA);
+            instructions = instructions.Select(i => {i.ResetInstruction(); return i;}).ToList();
+            ProcessInstructions(instructions);
+            var finalValuePartB = _wireList.GetWire("a").GetValue();
+            Console.WriteLine("Part B -> Wire a: " + finalValuePartB);
+
+        }
+
+        private void ProcessInstructions(List<LogicWireInstruction> instructions)
+        {
             while (instructions.Count > 0)
             {
                 foreach (var instruction in instructions)
@@ -42,7 +53,16 @@ namespace AdventOfCode2015.Challenges
                 }
                 instructions = instructions.Where(instruction => instruction.InstructionDone == false).ToList();
             }
-            Console.WriteLine("Wire a" + _wireList.GetWire("a").GetValue());
+        }
+
+        List<LogicWireInstruction> LoadInstructions()
+        {
+            var instructions = new List<LogicWireInstruction>();
+            foreach (var line in text)
+            {
+                instructions.Add(_logicFunctions.StringToInstruction(line));
+            }
+            return instructions;
         }
     }
 }

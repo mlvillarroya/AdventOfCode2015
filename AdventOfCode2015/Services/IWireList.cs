@@ -7,5 +7,6 @@ namespace AdventOfCode2015.Services
         void SetWire(string code, int signal);
         Wire GetWire(string code);
         public bool WireIsSet(string code);
+        public void ResetWireList();
     }
 }
