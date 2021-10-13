@@ -41,3 +41,4 @@
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/ref/AdventOfCode2015.dll
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.pdb
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.genruntimeconfig.cache
+/Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/bin/Debug/net5.0/Combinatorics.dll

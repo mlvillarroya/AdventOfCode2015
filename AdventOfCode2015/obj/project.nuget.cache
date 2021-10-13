@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iX6XQ2ahYb8PjIHNEDQVVZm35+zmkQGWLDwWKezU3k5fu4Kgv/D54RKI8PnnaV3KCexDqm0F084ai67/aK6ctQ==",
+  "dgSpecHash": "kMCjI/6Swr2j6j0ki/BMX90v0jqdAKMDxDEkya4ptsScDlm0oAKN6Juc3xINldJyJ9ShJXRCVoD9fqaAfCbi+A==",
   "success": true,
   "projectFilePath": "/Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/AdventOfCode2015.csproj",
   "expectedPackageFiles": [
+    "/Users/mikellop/.nuget/packages/combinatorics/2.0.0/combinatorics.2.0.0.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/microsoft.extensions.configuration/5.0.0/microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/microsoft.extensions.configuration.abstractions/5.0.0/microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/microsoft.extensions.configuration.binder/5.0.0/microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Combinatorics/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Combinatorics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Combinatorics.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -451,6 +460,24 @@
     }
   },
   "libraries": {
+    "Combinatorics/2.0.0": {
+      "sha512": "E00cVYTp5FTCMN9DnY64zoM3ihboRW2of8zX18OqpCtUGdyqtZk3WC7wmSp5qc15UoBa+st8VoDsm+O22tkTaQ==",
+      "type": "package",
+      "path": "combinatorics/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "combinatorics.2.0.0.nupkg.sha512",
+        "combinatorics.nuspec",
+        "icon.png",
+        "lib/net461/Combinatorics.dll",
+        "lib/net461/Combinatorics.xml",
+        "lib/netstandard1.1/Combinatorics.dll",
+        "lib/netstandard1.1/Combinatorics.xml",
+        "lib/netstandard2.0/Combinatorics.dll",
+        "lib/netstandard2.0/Combinatorics.xml"
+      ]
+    },
     "Microsoft.Extensions.Configuration/5.0.0": {
       "sha512": "LN322qEKHjuVEhhXueTUe7RNePooZmS8aGid5aK2woX3NPjSnONFyKUc6+JknOS6ce6h2tCLfKPTBXE3mN/6Ag==",
       "type": "package",
@@ -1166,6 +1193,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Combinatorics >= 2.0.0",
       "Microsoft.Extensions.DependencyInjection >= 5.0.2",
       "Microsoft.Extensions.Hosting >= 5.0.0"
     ]
@@ -1209,6 +1237,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Combinatorics": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[5.0.2, )"
