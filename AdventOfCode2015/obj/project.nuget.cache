@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kMCjI/6Swr2j6j0ki/BMX90v0jqdAKMDxDEkya4ptsScDlm0oAKN6Juc3xINldJyJ9ShJXRCVoD9fqaAfCbi+A==",
+  "dgSpecHash": "fpVWQg/EDDVH/9vAAIlpwKwF+vsaEvwkzxwWbjp+v6iQvSa2WEfy7OQRq1NUiokSAxBsY9WaDogeAz6F9lklsg==",
   "success": true,
   "projectFilePath": "/Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/AdventOfCode2015.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,7 @@
     "/Users/mikellop/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "/Users/mikellop/.nuget/packages/morelinq/3.3.2/morelinq.3.3.2.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/system.diagnostics.eventlog/5.0.0/system.diagnostics.eventlog.5.0.0.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
     "/Users/mikellop/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512"
