@@ -43,3 +43,4 @@
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.genruntimeconfig.cache
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/bin/Debug/net5.0/Combinatorics.dll
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/bin/Debug/net5.0/MoreLinq.dll
+/Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/bin/Debug/net5.0/Newtonsoft.Json.dll
