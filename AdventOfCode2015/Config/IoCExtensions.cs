@@ -46,6 +46,7 @@ namespace AdventOfCode2015.Config
             services.AddTransient<Challenge10>();
             services.AddTransient<Challenge11>();
             services.AddTransient<Challenge12>();
+            services.AddTransient<Challenge13>();
 
             return services;
         }
