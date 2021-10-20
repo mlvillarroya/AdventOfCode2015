@@ -36,7 +36,6 @@
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.AssemblyInfoInputs.cache
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.AssemblyInfo.cs
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.csproj.CoreCompileInputs.cache
-/Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.csproj.CopyComplete
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.dll
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/ref/AdventOfCode2015.dll
 /Users/mikellop/RiderProjects/AdventOfCode2015/AdventOfCode2015/obj/Debug/net5.0/AdventOfCode2015.pdb

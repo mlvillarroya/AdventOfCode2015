@@ -1,12 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Sockets;
 using AdventOfCode2015.Services;
 using AdventOfCode2015.Resources;
 using Combinatorics.Collections;
-using MoreLinq;
 
 
 namespace AdventOfCode2015.Challenges
@@ -15,7 +12,6 @@ namespace AdventOfCode2015.Challenges
     {
         private readonly IFileWrapper _fileWrapper;
         private readonly IFileServer _fileServer;
-        private readonly int _maxTime = 2503;
 
         public Challenge15(IFileWrapper fileWrapper,
             IFileServer fileServer)
@@ -36,7 +32,6 @@ namespace AdventOfCode2015.Challenges
                 // challenge A: if (capacity>0 && durability>0 && flavour>0 && texture>0) scores.Add(capacity*durability*flavour*texture);
                 /* challenge B: */ if (capacity>0 && durability>0 && flavour>0 && texture>0 && calories == 500) scores.Add(capacity*durability*flavour*texture);
             }
-
             Console.WriteLine($"Max score: {scores.Max()}");
         }
 
