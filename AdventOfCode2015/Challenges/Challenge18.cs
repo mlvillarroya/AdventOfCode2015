@@ -76,7 +76,6 @@ namespace AdventOfCode2015.Challenges
 
         private int CheckEnvironment(char[][] lightArray, int i, int j)
         {
-            var total = 0;
             if (i == 0) // TOP
             {
                 // upper left corner
