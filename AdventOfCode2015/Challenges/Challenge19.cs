@@ -33,27 +33,19 @@ namespace AdventOfCode2015.Challenges
             while (!target.Equals("e"))
             {
                 var temp = target;
+                var target2 = target;
                 foreach (var line in text)
                 {
-                    //target = Regex.Replace(target, "([.*]*)"+line[1]+"([.*]*)", "$1"+line[0]+"$2");
-                    //mutations++;
-                    var a = line[0]; 
-                    var b = line[1];
-                    var index = target.IndexOf(b);
+                    //target2 = Regex.Replace(target, "([.*]*)"+line[1]+"([.*]*)", "$1"+line[0]+"$2");
+                    var found = 0;
+                    var index = target.IndexOf(line[1]);
                     if (index >= 0)
                     {
-                        target = target.Substring(0, index) + a + target.Substring(index + b.Length);
+                        target = Regex.Replace(target, line[1], x => found++ == 0 ? line[0] : x.Value);
                         mutations++;
                     }
                 }
-                if (temp.Equals(target))
-                {
-                    target = OriginalString;
-                    mutations = 0;
-                    text = text.OrderBy(a => rng.Next()).ToList();
-                }
             }
-
             Console.WriteLine(mutations);
         }
         
