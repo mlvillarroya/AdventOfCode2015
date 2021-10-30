@@ -31,35 +31,19 @@ namespace AdventOfCode2015.Challenges
                 Select(c=>c.Split(" ")).
                 ToList();
             // PART A
-            // possibleCombinations = CreatePossibleInventories();
-            // (swords, shields, rings) = LoadWeaponList(text);
-            // var prizes = new List<CombinationPrizeWin>();
-            // foreach (var combination in possibleCombinations)
-            // {
-            //     prizes.Add(new CombinationPrizeWin()
-            //     {
-            //         Combination = combination,
-            //         Prize = CalculatePrize(combination,swords,shields,rings),
-            //         Win = YouWin(100,YourDamage(combination,swords,shields,rings),YourArmor(combination,swords,shields,rings),103,9,2)
-            //     });
-            // }
-            var items = text.Where(l => (l.Length > 1 && int.TryParse(l[2].ToString(),out int a) == true)).
-                Select(i=> (i[0],int.Parse(i[1]),int.Parse(i[2]),int.Parse(i[3]))).
-                ToList();
-            var possibilities = new Variations<int>(Enumerable.Range(0, 2), 16,GenerateOption.WithRepetition).Where(p=>(p[0]!=0 || p[1]!=0 || p[2]!=0 || p[3]!=0 || p[4]!=0)).ToList();
-            var prizeWin = new List<CombinationPrizeWin>();
-            foreach (var possibility in possibilities)
+            possibleCombinations = CreatePossibleInventories();
+            (swords, shields, rings) = LoadWeaponList(text);
+            var prizes = new List<CombinationPrizeWin>();
+            foreach (var combination in possibleCombinations)
             {
-                (var prize, var damage, var armor) = SumProduct(possibility, items);
-                prizeWin.Add(new CombinationPrizeWin()
+                prizes.Add(new CombinationPrizeWin()
                 {
-                    Combination = possibility,
-                    Prize = prize,
-                    Win = YouWin(100,damage,armor,103,9,2)
+                    Combination = combination,
+                    Prize = CalculatePrize(combination,swords,shields,rings),
+                    Win = YouWin(100,YourDamage(combination,swords,shields,rings),YourArmor(combination,swords,shields,rings),103,9,2)
                 });
             }
-
-            Console.WriteLine(prizeWin.Where(i => i.Win == false).OrderBy(i => i.Prize).Last().Prize);
+            Console.WriteLine(prizes.Where(i => i.Win == false).OrderBy(i => i.Prize).Last().Prize);
         }
 
         private (int,int,int) SumProduct(IReadOnlyList<int> possibility, List<(string, int, int, int)> items)
