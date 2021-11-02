@@ -19,5 +19,6 @@ namespace AdventOfCode2015.Resources
         public static string CHALLENGE18 => "challenge18.txt";
         public static string CHALLENGE19 => "challenge19.txt";
         public static string CHALLENGE21_WEAPONS => "challenge21_weapons.txt";
+        public static string CHALLENGE23 => "challenge23.txt";
     }
 }
